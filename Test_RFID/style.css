@@ -707,6 +707,10 @@ p.legal:nth-child(2) {
     .bg-top-blue div:nth-child(2) {
         font-size: 22px;
     }
+
+    .thanks-for-test span {
+        font-size: 26px;
+    }
 }
 
 /* Para pantallas extra pequeñas (como móviles) */
