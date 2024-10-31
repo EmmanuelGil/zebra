@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zebra - Test RFID</title>
+    <!-- Bootstrap CSS -->
+    <link rel="icon" type="image/ico"
+        href="https://www.zebra.com/etc.clientlibs/zebra-web/clientlibs/clientlib-site/resources/images/favicons/favicon.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row py-2">
+                <div class="col-6 d-flex align-items-center">
+                    <a href="https://www.zebra.com/la/es.html" target="_blank"><img src="img/logo.png" alt="Company Logo"></a>
+                </div>
+                <div class="col-6 d-flex justify-content-end align-items-center">
+                    <a class="btn btn-1" href="#" target="_blank">Contáctenos <svg class="arrow-1" width="7" height="13"
+                            viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.906128 0.963005L6.69657 6.60846L0.906136 12.037" stroke="currentColor"
+                                stroke-width="2" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="start-section" class="random-container">
+        <div class="img-respo"><img src="img/2_02_mb.png" alt=""></div>
+        <div class="welcome-absolute">
+            <div class="col35">
+                <h1 class="display-4">Quiz RFID para Retail</h1>
+                <h2 class="text-2">¿Está su tienda lista para adoptar tecnología <strong>RFID?</strong></h2>
+                <p class="text-3">
+                    Lo invitamos a tomar el siguiente <strong>Quiz RFID para Retailers</strong> y conozca de la mano de
+                    Zebra, si este es el momento de implementar <strong>tecnología RFID</strong> en los procesos de su
+                    tienda.
+                </p>
+                <button id="start-btn" class="first-btn">Iniciar el quiz aquí <svg class="arrow" width="7" height="13"
+                        viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.906128 0.963005L6.69657 6.60846L0.906136 12.037" stroke="currentColor"
+                            stroke-width="2" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="img/2_02.jpg" alt="Descripción de la imagen">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <form action="" id="questions-form" method="" style="display: none;">
+                <!-- Question 1: Basic Data -->
+                <div class="question" style="display: none;">
+                    <div class="bg-top-blue">
+                        <div>&nbsp;</div>
+                        <div><img src="img/icon-top.png" alt=""> <span>Quiz RFID para Retail</span></div>
+                        <div>Paso 1 de 8</div>
+                    </div>
+                    <h2 class="question-title-1"><span class="blue-number">1.</span> ¿Cuántos empleados en total
+                        tiene
+                        por establecimiento?</h2>
+                    <p class="sub-title">Incluya todos los turnos en el conteo.</p>
+                    <div class="grid-question-3">
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-8/8-1.png" alt=""><input type="radio" name="total_empleados" value="Menos de 
+                        4 empleados">Menos de 4 empleados
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-8/8-2.png" alt=""><input type="radio" name="total_empleados" value="De 4 a 
+                        15 empleados">De 4 a 15 empleados
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-8/8-3.png" alt=""><input type="radio" name="total_empleados" value="De 16 a 
+                        50 empleados">De 16 a 50 empleados
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-8/8-4.png" alt=""><input type="radio" name="total_empleados" value="Más de 
+                        50 empleados">Más de 50 empleados
+                        </div>
+                    </div>
+                    <div class="error-message alert alert-danger" role="alert">Selecciona al menos una opción.</div>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-primary next-btn">Siguiente pregunta <svg class="arrow-1"
+                                width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.906128 0.963005L6.69657 6.60846L0.906136 12.037" stroke="currentColor"
+                                    stroke-width="2" />
+                            </svg></button>
+                    </div>
+                </div>
+                <!-- Question 2: Single Choice -->
+                <div class="question" style="display: none;">
+                    <div class="bg-top-blue">
+                        <div class="prev-btn-2"><img src="img/arrow-1.png" alt=""></div>
+                        <div><img src="img/icon-top.png" alt=""> <span>Quiz RFID para Retail</span></div>
+                        <div>Paso 2 de 8</div>
+                    </div>
+                    <h2 class="question-title-1"><span class="blue-number">2.</span> ¿Conoce las funcionalidades y
+                        ventajas de la tecnología RFID o la ha investigado
+                        para su negocio antes?</h2>
+                    <div class="grid-question-2">
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-2/2-1.png" alt="">
+                            <input type="radio" name="funcionalidades_ventajas" value="Nunca antes la escuche"
+                                required="">
+                            Nunca antes la escuché
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-2/2-2.png" alt="">
+                            <input type="radio" name="funcionalidades_ventajas"
+                                value="Me parece que he escuchado algo alguna vez" required="">
+                            Me parece que he escuchado algo alguna vez
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-2/2-3.png" alt="">
+                            <input type="radio" name="funcionalidades_ventajas"
+                                value="He estado investigando sobre el tema" required="">
+                            He estado investigando sobre el tema
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-2/2-4.png" alt="">
+                            <input type="radio" name="funcionalidades_ventajas"
+                                value="Lo conozco y estoy buscando implementarlo" required="">
+                            Lo conozco y estoy buscando implementarlo
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-2/2-5.png" alt="">
+                            <input type="radio" name="funcionalidades_ventajas"
+                                value="Lo conozco bien, ya estamos usándola en el comercio" required="">
+                            Lo conozco bien, ya estamos usándola en el comercio
+                        </div>
+                    </div>
+                    <div class="error-message alert alert-danger" role="alert">Selecciona una opción.</div>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-secondary prev-btn"><svg class="arrow-2" width="9" height="14"
+                                viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.6785 12.5341L1.70905 7.0783L7.32145 1.4659" stroke="white"
+                                    stroke-width="2" />
+                            </svg> Anterior</button>
+                        <button type="button" class="btn btn-primary next-btn">Siguiente <svg class="arrow-1" width="7"
+                                height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.906128 0.963005L6.69657 6.60846L0.906136 12.037" stroke="currentColor"
+                                    stroke-width="2" />
+                            </svg></button>
+                    </div>
+                </div>
+                <!-- Question 3: Multiple Choice -->
+                <div class="question" style="display: none;">
+                    <div class="bg-top-blue">
+                        <div class="prev-btn-2"><img src="img/arrow-1.png" alt=""></div>
+                        <div><img src="img/icon-top.png" alt=""> <span>Quiz RFID para Retail</span></div>
+                        <div>Paso 3 de 8</div>
+                    </div>
+                    <h2 class="question-title-1"><span class="blue-number">3.</span> ¿En cuáles operaciones de su
+                        tienda
+                        y almacén quisiera usar tecnología RFID?
+                    </h2>
+                    <p class="sub-title">Seleccione todas las que apliquen a su negocio.</p>
+                    <div class="grid-question-2">
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-3/3-1.png" alt=""><input name="" type="checkbox"
+                                value="Gestion del inventario">Gestión del
+                            inventario
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-3/3-2.png" alt=""><input name="" type="checkbox"
+                                value="Apoyo en el punto de venta">Apoyo en el
+                            punto de venta
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-3/3-3.png" alt=""><input type="checkbox"
+                                value="Lectura de productos en tienda">Lectura
+                            de productos en
+                            tienda
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-3/3-4.png" alt=""><input name="" type="checkbox"
+                                value="Lectura de productos en bodega">Lectura
+                            de productos en
+                            bodega
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-3/3-5.png" alt=""><input name="" type="checkbox"
+                                value="Etiquetado o re-etiquetado de productos">Etiquetado o
+                            re-etiquetado de productos
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-3/3-6.png" alt=""><input name="" type="checkbox"
+                                value="Control de pérdida de insumos y productos">Control de pérdida
+                            de
+                            insumos y productos
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-3/3-7.png" alt=""><input name="" type="checkbox"
+                                value="Manejo del movimiento y rotación de productos">Manejo del
+                            movimiento y rotación de productos
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-3/3-8.png" alt=""><input name="" type="checkbox"
+                                value="Análisis de información actualizada sobre los productos">Análisis
+                            de información actualizada sobre los productos
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-3/3-9.png" alt=""><input name="" type="checkbox"
+                                value="Conteo de productos manualmente">Conteo
+                            de productos
+                            manualmente
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-3/3-10.png" alt=""><input name="" type="checkbox"
+                                value="Escaneado de productos que pueden inhibir la radiofrecuencia">Escaneado de
+                            productos
+                            que pueden inhibir la radiofrecuencia
+                        </div>
+                    </div>
+                    <div class="error-message alert alert-danger" role="alert">Selecciona al menos una opción.</div>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-secondary prev-btn"><svg class="arrow-2" width="9" height="14"
+                                viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.6785 12.5341L1.70905 7.0783L7.32145 1.4659" stroke="white"
+                                    stroke-width="2" />
+                            </svg> Anterior</button>
+                        <button type="button" class="btn btn-primary next-btn">Siguiente <svg class="arrow-1" width="7"
+                                height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.906128 0.963005L6.69657 6.60846L0.906136 12.037" stroke="currentColor"
+                                    stroke-width="2" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- Question 4: Single Choice -->
+                <div class="question" style="display: none;">
+                    <div class="bg-top-blue">
+                        <div class="prev-btn-2"><img src="img/arrow-1.png" alt=""></div>
+                        <div><img src="img/icon-top.png" alt=""> <span>Quiz RFID para Retail</span></div>
+                        <div>Paso 4 de 8</div>
+                    </div>
+                    <h2 class="question-title-1"><span class="blue-number">4.</span> ¿Su negocio cuenta con varias
+                        tiendas?</h2>
+                    <div class="grid-question-3">
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-4/4-1.png" alt=""><input type="radio"
+                                name="su_negocio_cuenta_con_varias_tiendas" value="No cuento con 1 tienda" required>No,
+                            cuento con 1 tienda
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-4/4-2.png" alt=""><input type="radio"
+                                name="su_negocio_cuenta_con_varias_tiendas" value="Si, de 2 a 10 tiendas" required>Si,
+                            de 2 a 10 tiendas
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-4/4-3.png" alt=""><input type="radio"
+                                name="su_negocio_cuenta_con_varias_tiendas" value="Si de 10 a 50 tiendas" required>Si,
+                            de 10 a 50 tiendas
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-4/4-4.png" alt=""><input type="radio"
+                                name="su_negocio_cuenta_con_varias_tiendas" value="Si, más de 50 tiendas" required>Si,
+                            más de 50 tiendas
+                        </div>
+                    </div>
+                    <div class="error-message alert alert-danger" role="alert">Selecciona una opción.</div>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-secondary prev-btn"><svg class="arrow-2" width="9" height="14"
+                                viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.6785 12.5341L1.70905 7.0783L7.32145 1.4659" stroke="white"
+                                    stroke-width="2" />
+                            </svg> Anterior</button>
+                        <button type="button" class="btn btn-primary next-btn">Siguiente <svg class="arrow-1" width="7"
+                                height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.906128 0.963005L6.69657 6.60846L0.906136 12.037" stroke="currentColor"
+                                    stroke-width="2" />
+                            </svg></button>
+                    </div>
+                </div>
+                <!-- Question 5: Single Choice -->
+                <div class="question" style="display: none;">
+                    <div class="bg-top-blue">
+                        <div class="prev-btn-2"><img src="img/arrow-1.png" alt=""></div>
+                        <div><img src="img/icon-top.png" alt=""> <span>Quiz RFID para Retail</span></div>
+                        <div>Paso 5 de 8</div>
+                    </div>
+                    <h2 class="question-title-1"><span class="blue-number">5.</span> ¿Cuántos SKUs maneja en su
+                        negocio?
+                    </h2>
+                    <p class="sub-title">SKU: Referencias de producto</p>
+                    <div class="grid-question-3">
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-5/5-1.png" alt=""><input type="radio" name="sku">Total de SKUs
+                            menor de 200
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-5/5-2.png" alt=""><input type="radio" name="sku">Total de SKUs
+                            201 a 1.000
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-5/5-3.png" alt=""><input type="radio" name="sku">Total de SKUs
+                            1.001 a 5.000
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-5/5-4.png" alt=""><input type="radio" name="sku">Total de SKUs
+                            más de 5.000
+                        </div>
+                    </div>
+                    <div class="error-message alert alert-danger" role="alert">Selecciona al menos una opción.</div>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-secondary prev-btn"><svg class="arrow-2" width="9" height="14"
+                                viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.6785 12.5341L1.70905 7.0783L7.32145 1.4659" stroke="white"
+                                    stroke-width="2" />
+                            </svg> Anterior</button>
+                        <button type="button" class="btn btn-primary next-btn">Siguiente <svg class="arrow-1" width="7"
+                                height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.906128 0.963005L6.69657 6.60846L0.906136 12.037" stroke="currentColor"
+                                    stroke-width="2" />
+                            </svg></button>
+                    </div>
+                </div>
+                <!-- Question 6: Single Choice -->
+                <div class="question" style="display: none;">
+                    <div class="bg-top-blue">
+                        <div class="prev-btn-2"><img src="img/arrow-1.png" alt=""></div>
+                        <div><img src="img/icon-top.png" alt=""> <span>Quiz RFID para Retail</span></div>
+                        <div>Paso 6 de 8</div>
+                    </div>
+                    <h2 class="question-title-1"><span class="blue-number">6.</span> ¿Cómo realiza el proceso de
+                        captura
+                        de información de sus productos entrantes en el inventario?</h2>
+                    <div class="grid-question-2">
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-6/6-1.png" alt=""><input type="radio"
+                                name="productos_entrantes_en_el_inventario"
+                                value="No lo hacemos no contamos con dispositivos de captura" required>No lo
+                            hacemos, no
+                            contamos con dispositivos de captura
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-6/6-2.png" alt=""><input type="radio"
+                                name="productos_entrantes_en_el_inventario" value="Lo hacemos manualmente" required>Lo
+                            hacemos manualmente
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-6/6-3.png" alt=""><input type="radio"
+                                name="productos_entrantes_en_el_inventario"
+                                value="Una única estación estática de lectura" required>Una única estación estática
+                            de
+                            lectura
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-6/6-4.png" alt=""><input type="radio"
+                                name="productos_entrantes_en_el_inventario"
+                                value="Varias estaciones estáticas de lectura" required>Varias estaciones estáticas
+                            de
+                            lectura
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-6/6-5.png" alt=""><input type="radio"
+                                name="productos_entrantes_en_el_inventario" value="Multiples lectores moviles"
+                                required>Múltiples lectores móviles
+                        </div>
+                    </div>
+                    <div class="error-message alert alert-danger" role="alert">Selecciona una opción.</div>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-secondary prev-btn"><svg class="arrow-2" width="9" height="14"
+                                viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.6785 12.5341L1.70905 7.0783L7.32145 1.4659" stroke="white"
+                                    stroke-width="2" />
+                            </svg> Anterior</button>
+                        <button type="button" class="btn btn-primary next-btn">Siguiente <svg class="arrow-1" width="7"
+                                height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.906128 0.963005L6.69657 6.60846L0.906136 12.037" stroke="currentColor"
+                                    stroke-width="2" />
+                            </svg></button>
+                    </div>
+                </div>
+                <!-- Question 7: Single Choice -->
+                <div class="question" style="display: none;">
+                    <div class="bg-top-blue">
+                        <div class="prev-btn-2"><img src="img/arrow-1.png" alt=""></div>
+                        <div><img src="img/icon-top.png" alt=""> <span>Quiz RFID para Retail</span></div>
+                        <div>Paso 7 de 8</div>
+                    </div>
+                    <h2 class="question-title-1"><span class="blue-number">7.</span> ¿Cantidad de inventario que
+                        tiene
+                        en piso de venta?</h2>
+                    <div class="grid-question-3">
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-7/7-1.png" alt=""><input type="radio" name="inventario_piso_venta"
+                                value="Inventario en piso de venta menos de 990 piezas">Inventario en piso de venta
+                            menos de
+                            990 piezas
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-7/7-2.png" alt=""><input type="radio" name="inventario_piso_venta"
+                                value="Inventario en piso de venta 1 000 a 1 750 piezas">Inventario en piso de venta
+                            1,000 a
+                            1,750 piezas
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-7/7-3.png" alt=""><input type="radio" name="inventario_piso_venta"
+                                value="Inventario en piso de venta 5 000 a 10 000 piezas"> Inventario en piso de
+                            venta
+                            5,000
+                            a 10,000 piezas
+                        </div>
+                        <div class="input-boxes" tabindex="0">
+                            <img src="img/question-7/7-4.png" alt=""><input type="radio" name="inventario_piso_venta"
+                                value="Inventario en piso de venta más de 10 000 piezas">Inventario en piso de venta
+                            más
+                            de
+                            10,000 piezas
+                        </div>
+                    </div>
+                    <div class="error-message alert alert-danger" role="alert">Selecciona al menos una opción.</div>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-secondary prev-btn"><svg class="arrow-2" width="9" height="14"
+                                viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.6785 12.5341L1.70905 7.0783L7.32145 1.4659" stroke="white"
+                                    stroke-width="2" />
+                            </svg> Anterior</button>
+                        <button type="button" class="btn btn-primary next-btn">Siguiente <svg class="arrow-1" width="7"
+                                height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.906128 0.963005L6.69657 6.60846L0.906136 12.037" stroke="currentColor"
+                                    stroke-width="2" />
+                            </svg></button>
+                    </div>
+                </div>
+                <!-- Question 8: Single Choice -->
+                <div class="question" style="display: none;">
+                    <div class="bg-top-blue">
+                        <div class="prev-btn-2"><img src="img/arrow-1.png" alt=""></div>
+                        <div><img src="img/icon-top.png" alt=""> <span>Quiz RFID para Retail</span></div>
+                        <div>Paso 8 de 8</div>
+                    </div>
+                    <h2 class="question-title-1"><span class="blue-number">8.</span> Empecemos, completa la
+                        siguiente
+                        información:</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            Nombre completo: *
+                            <input type="text" name="nombre" class="form-control mb-2" placeholder="Nombre" required>
+                            País: *
+                            <select id="pais" class="form-control mb-2" required>
+                                <option value="">Seleccione un país</option>
+                                <!-- Add the countries -->
+                            </select>
+                            Teléfono: *
+                            <input type="tel" name="telefono" class="form-control mb-2" placeholder="Teléfono" required>
+                            Cargo o posición: *
+                            <input type="text" name="cargo" class="form-control mb-2" placeholder="Cargo o Posición"
+                                required>
+                        </div>
+                        <div class="col-md-6">
+                            Correo electrónico: *
+                            <input type="email" name="correo" class="form-control mb-2" placeholder="Correo electrónico"
+                                required>
+                            Ciudad: *
+                            <select id="ciudad" name="ciudad" class="form-control mb-2" required>
+                                <option value="">Seleccione una ciudad</option>
+                                <!-- Add the cities -->
+                            </select>
+                            Nombre de la empresa: *
+                            <input type="text" name="empresa" class="form-control mb-2"
+                                placeholder="Nombre de la Empresa" required>
+                        </div>
+                    </div>
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="politicas" required>
+                        <label class="form-check-label" for="politicas">Al registrarme acepto la política de
+                            tratamiento
+                            de datos de Zebra. Para conocerla haga click aqui.</label>
+                    </div>
+                    <div class="error-message alert alert-danger" role="alert">Por favor completa todos los campos
+                        obligatorios.</div>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-secondary prev-btn"><svg class="arrow-2" width="9" height="14"
+                                viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.6785 12.5341L1.70905 7.0783L7.32145 1.4659" stroke="white"
+                                    stroke-width="2" />
+                            </svg> Anterior</button>
+                        <input type="hidden" name="gate_code" value="gate-0ddbbc3d-7a03-419b-9f6f-0815802367de">
+                        <button type="submit" class="btn btn-success">Siguiente <svg class="arrow-1" width="7"
+                                height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.906128 0.963005L6.69657 6.60846L0.906136 12.037" stroke="currentColor"
+                                    stroke-width="2" />
+                            </svg></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="triangle"></div>
+        <div class="triangle-dos"></div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="text-white text-center py-4">
+                    <div>
+                        <a href="http://www.linkedin.com/company/167024?trk=tyah" target="_blank" class="text-white me-3 social">
+                            <img src="img/linkedin.png" alt="linkedin">
+                        </a>
+                        <a href="https://x.com/ZebraTechnology" target="_blank" class="text-white me-3 social">
+                            <img src="img/x.png" alt="x">
+                        </a>
+                        <a href="http://www.facebook.com/pages/Zebra-Technologies/107703715989073" target="_blank" class="text-white me-3 social">
+                            <img src="img/facebook.png" alt="facebook">
+                        </a>
+                        <a href="http://www.youtube.com/zebratechnologies#p/u" target="_blank" class="text-white social">
+                            <img src="img/youtube.png" alt="youtube">
+                        </a>
+                        <a href="https://www.zebra.com/la/es/blog.html" target="_blank" class="text-white social">
+                            <img src="img/b.png" alt="youtube">
+                        </a>
+                    </div>
+                    <p class="legal">
+                        <span>Política de privacidad</span> &#124; <span>Términos y condiciones</span> &#124;
+                        <span>Información de la empresa</span>
+                    </p>
+                    <p class="legal">
+                        ZEBRA y la cabeza estilizada de Zebra son marcas comerciales de Zebra Technologies Corporation
+                        registradas en diversas jurisdicciones de todo el mundo. Todas las demás marcas comerciales son
+                        propiedad de sus respectivos dueños. © 2024 Zebra Technologies Corporation y/o sus afiliadas.
+                        Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#questions-form').hide();
+
+            $('#start-btn').click(function () {
+                $('#start-section').fadeOut(300, function () {
+                    $('#questions-form').fadeIn(300);
+                    $('#questions-form .question').first().fadeIn(300);
+                });
+            });
+
+            $('.next-btn').click(function () {
+                const currentQuestion = $(this).closest('.question');
+                let valid = true;
+
+                // Validation for the first question
+                if (currentQuestion.is(':first-child')) {
+                    const inputs = currentQuestion.find('input[required], textarea[required]');
+                    inputs.each(function () {
+                        if ($(this).is(':checkbox')) {
+                            if (!$(this).is(':checked')) {
+                                valid = false;
+                            }
+                        } else if ($(this).val() === '') {
+                            valid = false;
+                        }
+                    });
+                } else {
+                    // Validation for single/multiple choice questions
+                    const checkboxes = currentQuestion.find('input[type="checkbox"]:checked');
+                    const radios = currentQuestion.find('input[type="radio"]:checked');
+
+                    if (checkboxes.length === 0 && radios.length === 0) {
+                        valid = false;
+                    }
+                }
+
+                if (valid) {
+                    currentQuestion.fadeOut(300, function () {
+                        currentQuestion.next('.question').fadeIn(300);
+                        $('.error-message').fadeOut(); // Hides the error message when advancing
+                    });
+                } else {
+                    // Displays error message
+                    const errorMessage = currentQuestion.find('.error-message');
+                    errorMessage.fadeIn(300).delay(2000).fadeOut(300); // Disappears after 2 seconds
+                }
+            });
+
+            $('.prev-btn, .prev-btn-2').click(function () {
+                const currentQuestion = $(this).closest('.question');
+                currentQuestion.fadeOut(300, function () {
+                    currentQuestion.prev('.question').fadeIn(300);
+                    // Make sure the error message is hidden on return.
+                    currentQuestion.find('.error-message').hide();
+                });
+            });
+
+        });
+    </script>
+    <script>
+        // Function to handle click inside divs
+        function handleClick(event) {
+            // Check if the click was within an option div
+            if (event.target.closest('.input-boxes')) {
+                // Search for input inside the div
+                let input = event.target.closest('.input-boxes').querySelector('input[type="radio"], input[type="checkbox"]');
+                if (input) {
+                    // Toggle the status of a checkbox or mark a radius
+                    if (input.type === 'checkbox') {
+                        input.checked = !input.checked;
+                    } else if (input.type === 'radio') {
+                        input.checked = true;
+                    }
+                }
+            }
+        }
+
+        // Apply listener to all divs with classes .grid-question-2 and .grid-question-3
+        document.querySelectorAll('.grid-question-2, .grid-question-3').forEach(function (grid) {
+            grid.addEventListener('click', handleClick);
+        });
+    </script>
+</body>
+
+</html>
