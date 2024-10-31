@@ -709,7 +709,8 @@ p.legal:nth-child(2) {
     }
 
     .thanks-for-test span {
-        font-size: 26px;
+        font-size: 25px;
+        margin-left: 19px;
     }
 }
 
