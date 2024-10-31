@@ -703,6 +703,10 @@ p.legal:nth-child(2) {
     .input-boxes img {
         padding-right: 15px;
     }
+
+    .bg-top-blue div:nth-child(2) {
+        font-size: 22px;
+    }
 }
 
 /* Para pantallas extra pequeñas (como móviles) */
